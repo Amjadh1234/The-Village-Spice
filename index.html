@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Village Spice | Premium Authentic Spices</title>
+    <meta name="description"
+        content="Authentic Sri Lankan spices straight from the village. Premium quality Chilli, Pepper, Cinnamon, Cardamom, and more.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        spice: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316', // Primary Orange
+                            600: '#ea580c',
+                            700: '#c2410c', // Dark Spice
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        },
+                        dark: {
+                            800: '#1f1f1f',
+                            900: '#121212',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-color: #121212;
+            background-image: radial-gradient(#333 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .glass-nav {
+            background: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-dark-900 text-white font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-serif font-bold text-spice-500 tracking-wide">
+                        The Village Spice
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-spice-500 font-medium px-3 py-2 rounded-md transition-colors">Home</a>
+                        <a href="products.html"
+                            class="text-gray-300 hover:text-spice-400 px-3 py-2 rounded-md transition-colors font-medium">Shop
+                            Spices</a>
+                        <a href="about.html"
+                            class="text-gray-300 hover:text-spice-400 px-3 py-2 rounded-md transition-colors font-medium">Our
+                            Story</a>
+                        <a href="contact.html"
+                            class="text-gray-300 hover:text-spice-400 px-3 py-2 rounded-md transition-colors font-medium">Contact</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="toggleMobileMenu()"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-dark-900 absolute w-full border-b border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-spice-500 font-base rounded-md">Home</a>
+                <a href="products.html" class="block px-3 py-2 text-gray-300 hover:text-white rounded-md">Shop
+                    Spices</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-300 hover:text-white rounded-md">Our Story</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:text-white rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop"
+                alt="Spices Background" class="w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1
+                class="text-5xl md:text-7xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-spice-400 to-spice-600 mb-6 drop-shadow-lg animate-fade-in-up">
+                Authentic Flavors of<br>The Village
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-300 font-light tracking-wide mb-10">
+                Premium, hand-picked spices sourced directly from traditional village gardens. Experience the true aroma
+                of Ceylon.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="products.html"
+                    class="px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gradient-to-r from-spice-600 to-spice-700 hover:from-spice-500 hover:to-spice-600 md:py-4 md:text-lg md:px-10 shadow-lg shadow-spice-900/50 transform hover:scale-105 transition-all duration-300">
+                    Explore Shop
+                </a>
+                <a href="about.html"
+                    class="px-8 py-3 border border-gray-600 text-base font-medium rounded-full text-gray-300 hover:text-white hover:border-spice-500 bg-transparent hover:bg-white/5 md:py-4 md:text-lg md:px-10 transition-all duration-300">
+                    Our Story
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Products Preview -->
+    <section class="py-20 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Our Premium Selection</h2>
+                <div class="w-24 h-1 bg-spice-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-400">Hand-processed and sun-dried to perfection.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div
+                    class="group relative bg-dark-800 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-spice-900/20 transition-all duration-300 border border-gray-800 hover:border-spice-500/30">
+                    <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+                        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=600&auto=format&fit=crop"
+                            alt="Spices"
+                            class="w-full h-80 object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3
+                            class="mt-1 text-xl font-serif font-semibold text-white group-hover:text-spice-400 transition-colors">
+                            Ceylon Cinnamon</h3>
+                        <p class="mt-2 text-sm text-gray-400">True Cinnamon, harvested from pure sources.</p>
+                        <a href="products.html"
+                            class="mt-4 inline-block text-spice-400 hover:text-spice-300 font-medium text-sm border-b border-spice-400 pb-0.5">View
+                            Product &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div
+                    class="group relative bg-dark-800 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-spice-900/20 transition-all duration-300 border border-gray-800 hover:border-spice-500/30">
+                    <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+                        <img src="https://plus.unsplash.com/premium_photo-1675713486337-1237a3465922?q=80&w=600&auto=format&fit=crop"
+                            alt="Chilli Powder"
+                            class="w-full h-80 object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3
+                            class="mt-1 text-xl font-serif font-semibold text-white group-hover:text-spice-400 transition-colors">
+                            Red Chilli Powder</h3>
+                        <p class="mt-2 text-sm text-gray-400">Fiery, vibrant, and full of heat.</p>
+                        <a href="products.html"
+                            class="mt-4 inline-block text-spice-400 hover:text-spice-300 font-medium text-sm border-b border-spice-400 pb-0.5">View
+                            Product &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div
+                    class="group relative bg-dark-800 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-spice-900/20 transition-all duration-300 border border-gray-800 hover:border-spice-500/30">
+                    <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+                        <img src="https://images.unsplash.com/photo-1509358271058-acd22cc93898?q=80&w=600&auto=format&fit=crop"
+                            alt="Coffee"
+                            class="w-full h-80 object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3
+                            class="mt-1 text-xl font-serif font-semibold text-white group-hover:text-spice-400 transition-colors">
+                            Village Coffee</h3>
+                        <p class="mt-2 text-sm text-gray-400">Rich, dark roast coffee powder.</p>
+                        <a href="products.html"
+                            class="mt-4 inline-block text-spice-400 hover:text-spice-300 font-medium text-sm border-b border-spice-400 pb-0.5">View
+                            Product &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="products.html"
+                    class="inline-flex items-center justify-center px-8 py-3 border border-gray-700 text-base font-medium rounded-full text-white hover:bg-gray-800 md:py-3 md:text-lg md:px-8 transition-all duration-300">
+                    View All Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-dark-800 opacity-50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Traditional
+                        Methods,<br>Unmatched Quality</h2>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        At The Village Spice, we believe in the power of tradition. Our spices are cultivated in local
+                        home gardens, free from harmful chemicals, and processed using age-old techniques that preserve
+                        their natural oils and aroma.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-gray-300">
+                            <span
+                                class="h-6 w-6 rounded-full bg-spice-500/20 text-spice-500 flex items-center justify-center mr-3">✓</span>
+                            100% Natural & Organic
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <span
+                                class="h-6 w-6 rounded-full bg-spice-500/20 text-spice-500 flex items-center justify-center mr-3">✓</span>
+                            Sun-dried for preservation
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <span
+                                class="h-6 w-6 rounded-full bg-spice-500/20 text-spice-500 flex items-center justify-center mr-3">✓</span>
+                            Sourced directly from farmers
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <div
+                        class="absolute -inset-4 bg-gradient-to-r from-spice-500 to-spice-700 rounded-2xl blur-lg opacity-30">
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1532336414038-cf19250c5757?q=80&w=2070&auto=format&fit=crop"
+                        alt="Spices Preparation"
+                        class="relative rounded-2xl shadow-2xl border border-gray-700 w-full h-96 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-1">
+                    <h3 class="text-2xl font-serif font-bold text-spice-500 mb-4">The Village Spice</h3>
+                    <p class="text-gray-500 text-sm">Authentic flavors, delivered with love from our village to your
+                        kitchen.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium mb-4 uppercase tracking-wider text-sm">Products</h4>
+                    <ul class="space-y-2 text-gray-500 text-sm">
+                        <li><a href="products.html" class="hover:text-spice-400 transition-colors">Chilli Powder</a>
+                        </li>
+                        <li><a href="products.html" class="hover:text-spice-400 transition-colors">Black Pepper</a></li>
+                        <li><a href="products.html" class="hover:text-spice-400 transition-colors">Cinnamon</a></li>
+                        <li><a href="products.html" class="hover:text-spice-400 transition-colors">Coffee</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium mb-4 uppercase tracking-wider text-sm">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-500 text-sm">
+                        <li><a href="about.html" class="hover:text-spice-400 transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-spice-400 transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-spice-400 transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium mb-4 uppercase tracking-wider text-sm">Contact</h4>
+                    <ul class="space-y-2 text-gray-500 text-sm">
+                        <li>Email: hello@villagespice.com</li>
+                        <li>Phone: +94 77 123 4567</li>
+                        <li>Location: Matale, Sri Lanka</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-900 mt-12 pt-8 text-center text-gray-600 text-sm">
+                &copy; 2024 The Village Spice. All rights reserved. Made with &hearts; in the Village.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+                nav.classList.replace('bg-opacity-80', 'bg-opacity-95');
+            } else {
+                nav.classList.remove('shadow-lg');
+                nav.classList.replace('bg-opacity-95', 'bg-opacity-80');
+            }
+        });
+    </script>
+</body>
+
+</html>
